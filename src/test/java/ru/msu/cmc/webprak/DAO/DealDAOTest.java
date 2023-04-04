@@ -180,7 +180,11 @@ public class DealDAOTest {
     void simple_test() {
         Deal deals = dealDAO.getById(2L);
         assertEquals(2L, deals.getClient().getId());
+        List<Deal> deals_by_id_range = dealDAO.getAllDealsByColRange("id", "1", "3");
+        assertEquals(deals_by_id_range.size(), 3);
     }
+
+
 
 
 }
