@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
+    .indent {
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 20px;
+    }
+  </style>
+  <title></title>
+</head>
+<!--<body>-->
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<!--page header-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ddffdd" th:fragment="site-header">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" th:if="${mode == 0}">
+        <a class="nav-link" id="rootLinkAdmin" href="/">Панель управления администратора</a>
+      </li>
+      <li class="nav-item active" th:if="${mode == 1}">
+        <a class="nav-link" id="rootLinkEmployee" href="/">Главная (сотрудник)</a>
+      </li>
+      <li class="nav-item active" th:if="${mode == 2}">
+        <a class="nav-link" id="rootLinkClient" href="/">Главная (клиент)</a>
+      </li>
+      <li class="nav-item active" th:if="${mode == 3}">
+        <a class="nav-link" id="rootLinkGuest" href="/">Главная (гость)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="aboutCompanyLink" th:href="index">О компании</a>
+      </li>
+      <li class="nav-item" th:if="${mode == 2}">
+        <a class="nav-link" id="lkClientLink" th:href="lk_client">Личный кабинет</a>
+      </li>
+      <li class="nav-item" th:if="${mode <= 1}">
+        <a class="nav-link" id="lkStaffLink" th:href="lk_staff">Личный кабинет</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="signinPage" th:href="signin_client">Вход</a>
+      </li>
+      <li class="nav-item" th:if="${mode <= 1}">
+        <a class="nav-link" id="clientsPanelLink" th:href="clients">Все клиенты</a>
+      </li>
+      <li class="nav-item" th:if="${mode <= 1}">
+        <a class="nav-link" id="contractsPanelLink" th:href="contracts">Все контракты</a>
+      </li>
+      <li class="nav-item" th:if="${mode == 0}">
+        <a class="nav-link" id="staffPanelLink" th:href="staff">Все сотрудники</a>
+      </li>
+      <li class="nav-item" th:if="${mode == 42}">
+        <a class="nav-link" id="adminPanelLink" th:href="admin_panel">Панель администраторов</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--end of page header-->
+
+<!--for bootstrap-->
+<div th:fragment="site-script">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</div>
+<!--end for bootstrap-->
+
+<!-- Footer -->
+
+<footer th:fragment="site-footer" class="bg-dark text-center text-white mt-auto">
+
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/" role="button"
+      ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- VK -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://vk.com/" role="button"
+      ><i class="fab fa-vk"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com" role="button"
+      ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Telegram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://t.me" role="button"
+      ><i class="fab fa-telegram"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com" role="button"
+      ><i class="fab fa-instagram"></i
+      ></a>
+
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" role="button"
+      ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="#!">Юридическая фирма "Название"</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+</body>
+</html>
