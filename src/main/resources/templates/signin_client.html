@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Авторизация</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Вход и регистрация</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+<nav th:replace="general :: site-header">
+</nav>
+
+<div>
+    <form method="post" action="/signin_client">
+        <input id="user_login" required type="text" name="user_login" placeholder="Логин">
+        <input id="user_password" required type="text" name="user_password" placeholder="Пароль">
+        <input type="submit" value="Войти как клиент" id="client_submit">
+    </form>
+    <form method="post" action="/signin_as_employee">
+        <input id="employee_login" required type="text" name="employee_login" placeholder="Логин">
+        <input id="employee_password" required type="text" name="employee_password" placeholder="Пароль">
+        <input type="submit" value="Войти как сотрудник" id="employee_submit">
+    </form>
+    <form method="post" action="/signin_as_guest">
+        <input type="submit" value="Войти как гость" id="guest_submit">
+    </form>
+    <p></p>
+    <form method="get" action="/edit_client">
+        <input type="submit" value="Зарегистрироваться новым клиентом" id="register_submit">
+    </form>
+</div>
+
+<footer th:replace="general :: site-footer">
+</footer>
 </body>
 </html>

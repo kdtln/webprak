@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Личный кабинет клиента</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+<nav th:replace="general :: site-header">
+</nav>
+
+<div class="indent">
+    <form method="get" action="/edit_contract">
+        <button id="addPersonButton" type="submit" class="btn btn-primary">Добавить новый контракт</button>
+    </form>
+    <br>
+
+    <table class="table table-bordered table-warning">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col"> Описание контракта </th>
+            <th scope="col"> Номер контракта </th>
+            <th scope="col"> Клиент </th>
+            <th scope="col"> Услуга в области </th>
+            <th scope="col"> Дата начала </th>
+            <th scope="col"> Дата завершения </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${contracts_list.isEmpty()}">
+            <td colspan="6"> В базе пока нет ни одного контракта. <a href="/edit_contract">Добавить контракт</a></td>
+        </tr>
+        <tr th:each="contract : ${contracts_list}">
+            <td>
+                <span th:text="${contract.getDescr()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getId()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getClient()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getService()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getStart()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getEnd()}"> </span>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<footer th:replace="general :: site-footer">
+</footer>
 </body>
 </html>

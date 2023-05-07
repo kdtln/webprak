@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Редактирование информации о работнике</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Редактирование информации о сотруднике</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+<nav th:replace="general :: site-header">
+</nav>
+
+<div class="indent">
+    <form method="post" action="/save_staff">
+
+        <label for="employee_id">employee_id:</label>
+        <input type="text" id="employee_id" name="employee_id" th:value="${staff.getId()}"><br><br>
+
+        <label for="employee_fullname">ФИО сотрудника:</label>
+        <input type="text" id="employee_fullname" name="employee_fullname" required th:value="${staff.getName()}"><br><br>
+
+        <label for="employee_address">Адрес сотрудника:</label>
+        <input type="text" id="employee_address" name="employee_address" required th:value="${staff.getAddress()()}"><br><br>
+
+        <label for="employee_phone_number">Телефон сотрудника:</label>
+        <input type="text" id="employee_phone_number" name="employee_phone_number" required th:value="${staff.getPhone()}"><br><br>
+
+        <label for="employee_email">Email сотрудника:</label>
+        <input type="text" id="employee_email" name="employee_email" required th:value="${staff.getEmail()}"><br><br>
+
+        <label for="employee_login">Логин сотрудника:</label>
+        <input type="text" id="employee_login" name="employee_login" required th:value="${staff.getLogin()}"><br><br>
+
+        <label for="employee_password">Пароль сотрудника:</label>
+        <input type="text" id="employee_password" name="employee_password" required th:value="${staff.getPassword()}"><br><br>
+
+        <label for="employee_post">Должность сотрудника:</label>
+        <input type="text" id="employee_post" name="employee_post" required th:value="${staff.getPost()}"><br><br>
+
+        <label for="employee_is_admin">Сотрудник является администратором (0 - нет, 1 - да):</label>
+        <input type="text" id="employee_is_admin" name="employee_is_admin" required th:value="${staff.getIs_admin()}"><br><br>
+
+        <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
+    </form>
+</div>
+
+<footer th:replace="general :: site-footer">
+</footer>
 </body>
 </html>

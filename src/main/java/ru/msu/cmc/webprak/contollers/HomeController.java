@@ -190,7 +190,7 @@ public class HomeController {
     public String get_signin(Model model) {
         model.addAttribute("mode", mode);
         model.addAttribute("user_id", user_id);
-        return "signin_client";
+        return "lk_client";
     }
 
     @GetMapping("lk_client")
