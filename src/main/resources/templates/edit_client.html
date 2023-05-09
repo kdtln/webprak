@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
     <title>Редактирование информации о клиенте</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+<nav th:replace="general :: site-header">
+</nav>
+
+<div class="indent">
+    <form method="post" action="/save_client">
+        <label for="id_client">client_id:</label>
+        <input type="text" id="id_client" name="id_client" th:value="${client.getId()}"><br><br>
+
+        <label for="face">ФИО Клиента:</label>
+        <input type="text" id="face" name="face" required th:value="${client.getFace()}"><br><br>
+
+        <label for="company_name">Название Фирмы:</label>
+        <input type="text" id="company_name" name="company_name" required th:value="${client.getName()}"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required th:value="${client.getEmail()}"><br><br>
+
+        <label for="login">Логин клиента:</label>
+        <input type="text" id="login" name="login" required th:value="${client.getLogin()}"><br><br>
+
+        <label for="password">Пароль клиента:</label>
+        <input type="text" id="password" name="password" required th:value="${client.getPassword()}"><br><br>
+
+        <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
+    </form>
+</div>
+
+<footer th:replace="general :: site-footer">
+</footer>
 </body>
 </html>

@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Редактирование информации о договоре</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Редактирование информации о контракте</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+<nav th:replace="general :: site-header">
+</nav>
+
+<div class="indent">
+    <form method="post" action="/save_contract">
+
+        <label for="id_deal">contract_id:</label>
+        <input type="text" id="id_deal" name="id_deal" th:value="${contract.getId()}"><br><br>
+
+        <label for="client">client_id:</label>
+        <input type="text" id="client" name="client" required th:value="${contract.getClient().getId().toString()}"><br><br>
+
+        <label for="worker">worker_id:</label>
+        <input type="text" id="worker" name="worker" th:value="${contract.getWorker().getId().toString()}"><br><br>
+
+        <label for="service">service_type_id:</label>
+        <input type="text" id="service" name="service" required th:value="${contract.getService().getId().toString()}"><br><br>
+
+        <label for="start_date">Дата оформления:</label>
+        <input type="date" id="start_date" name="start_date" th:value="${contract.getStart()}"><br><br>
+
+        <label for="end_date">Дата завершения:</label>
+        <input type="date" id="end_date" name="end_date" th:value="${contract.getEnd()}"><br><br>
+
+        <label for="description">Описание контракта:</label>
+        <input type="text" id="description" name="description" required th:value="${contract.getDescr()}"><br><br>
+
+
+        <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
+    </form>
+</div>
+
+<footer th:replace="general :: site-footer">
+</footer>
 </body>
 </html>

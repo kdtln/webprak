@@ -35,13 +35,13 @@ public class HomeController {
         return "services";
     }
 
-    public int mode = 0;
+    public int mode = 3;
     public Long user_id = null;
 
     public String fullname = "";
 
     @RequestMapping(value = "index")
-    public String about() {
+    public String index() {
         return "index";
     }
 
@@ -66,7 +66,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "signin_client")
-    public String sign_client() {
+    public String signin_client() {
         return "signin_client";
     }
 
@@ -179,11 +179,11 @@ public class HomeController {
         return "contracts";
     }
 
-    @GetMapping("about_company_page")
+    @GetMapping("index")
     public String get_about(Model model) {
         model.addAttribute("mode", mode);
         model.addAttribute("user_id", user_id);
-        return "about_company_page";
+        return "index";
     }
 
     @GetMapping("signin_client")
@@ -195,24 +195,28 @@ public class HomeController {
 
     @GetMapping("lk_client")
     public String get_lk_client(Model model) {
-        List<Deal> contracts_list = (List<Deal>) dealDAO.getAllDealsByValue("client_id", String.valueOf(user_id));
-        model.addAttribute("contracts_list", contracts_list);
-        model.addAttribute("contractsDAO", dealDAO);
-        model.addAttribute("mode", mode);
-        model.addAttribute("user_id", user_id);
+        if (user_id != null) {
+            List<Deal> contracts_list = new ArrayList<Deal>();
+            contracts_list = (List<Deal>) dealDAO.getAllDealsByValue("client", String.valueOf(user_id));
+            model.addAttribute("contracts_list", contracts_list);
+            model.addAttribute("contractsDAO", dealDAO);
+            model.addAttribute("mode", mode);
+            model.addAttribute("user_id", user_id);
+        }
+
         return "lk_client";
     }
 
 
     @GetMapping("lk_staff")
     public String get_lk_staff(Model model) {
-        List<Deal> contracts_list_old = (List<Deal>) dealDAO.getAll();
-        List<Deal> contracts_list = new ArrayList<Deal>();
-        /*List<EmployeeRegisteredService> ers_list = new ArrayList<>();
+        List<Deal> contracts_list = (List<Deal>) dealDAO.getAll();
+
+        //List<Deal> ers_list = new ArrayList<>();
         if (user_id != null) {
-            ers_list = employeeRegisteredServiceDAO.getEmployeeRegisteredServiceByValue("employee_id", user_id);
+            contracts_list = dealDAO.getAllDealsByValue("worker", String.valueOf(user_id));
         }
-        for (int i = 0; i < contracts_list_old.size(); i++) {
+        /*for (int i = 0; i < contracts_list_old.size(); i++) {
             Long contract_id = contracts_list_old.get(i).getId();
             boolean finded = false;
             for (int j = 0; j < ers_list.size(); j++) {
@@ -287,7 +291,7 @@ public class HomeController {
             clientsDAO.save(client);
         }
 
-        return "redirect:/clients";
+        return "redirect:/index";
     }
 
     @PostMapping("/save_staff")
@@ -331,37 +335,52 @@ public class HomeController {
         return s.isBlank() ? null : Date.valueOf(s);
     }
 
-    /*@PostMapping("/save_contract")
-    public String save_contract(@RequestParam(name = "contract_id", required = false) Long contract_id,
-                                @RequestParam(name = "client_id") Long client_id,
-                                @RequestParam(name = "service_type_id") Long service_type_id,
-                                @RequestParam(name = "beginning_date", required = false) String beginning_date,
-                                @RequestParam(name = "date_of_completion", required = false) String date_of_completion,
-                                @RequestParam(name = "contract_description") String contract_description,
-                                @RequestParam(name = "real_cost") Long real_cost,
+    @PostMapping("/save_contract")
+    public String save_contract(@RequestParam(name = "id_deal", required = false) Long contract_id,
+                                @RequestParam(name = "client") Long client_id,
+                                @RequestParam(name = "worker") Long worker_id,
+                                @RequestParam(name = "service") Long service_id,
+                                @RequestParam(name = "start_date", required = false) String start_date,
+                                @RequestParam(name = "end_date", required = false) String end_date,
+                                @RequestParam(name = "description") String description,
                                 Model model) {
 
-        Contracts contract = null;
+        Deal contract = null;
         if (contract_id != null) {
-            contract = contractsDAO.getById(contract_id);
+            contract = dealDAO.getById(contract_id);
+        }
+
+        Clients client = null;
+        if (client_id != null) {
+            client = clientsDAO.getById(client_id);
+        }
+
+        Workers workers = null;
+        if (worker_id != null) {
+            workers = workersDAO.getById(worker_id);
+        }
+
+        Services services = null;
+        if (service_id != null) {
+            services = servicesDAO.getById(service_id);
         }
 
         if (contract != null) {
-            contract.setClient_id(client_id);
-            contract.setService_type_id(service_type_id);
-            contract.setBeginning_date(str2Date(beginning_date));
-            contract.setDate_of_completion(str2Date(date_of_completion));
-            contract.setContract_description(contract_description);
-            contract.setReal_cost(real_cost);
-            contractsDAO.update(contract);
+            contract.setClient(client);
+            contract.setWorker(workers);
+            contract.setService(services);
+            contract.setStart(str2Date(start_date));
+            contract.setEnd(str2Date(end_date));
+            contract.setDescr(description);
+            dealDAO.update(contract);
         } else {
-            contract = new Contracts(contract_id, client_id, service_type_id, str2Date(beginning_date), str2Date(date_of_completion), contract_description, real_cost);
-            contractsDAO.save(contract);
+            contract = new Deal(contract_id, client, workers, services, str2Date(start_date), str2Date(end_date), description);
+            dealDAO.save(contract);
         }
 
-        return "redirect:/contracts";
+        return "redirect:/lk_staff";
     }
-*/
+
 
     @PostMapping("/save_service")
     public String save_services(@RequestParam(name = "id_service", required = false) Long id,
@@ -396,7 +415,7 @@ public class HomeController {
     @PostMapping("/delete_contract")
     public String removeContract(@RequestParam(name = "contract_id") Long contractId) {
         dealDAO.deleteById(contractId);
-        return "redirect:/contracts";
+        return "redirect:/lk_staff";
     }
 
     @PostMapping("/delete_staff")
@@ -418,4 +437,91 @@ public class HomeController {
         return "redirect:/services";
     }
 
+    @PostMapping("/signin_client")
+    public String signin_client(@RequestParam(name = "user_login") String user_login,
+                                   @RequestParam(name = "user_password") String user_password) {
+        List<Clients> cl = clientsDAO.getAllClientsByValue("login", user_login);
+        if (cl.size() != 1) {
+            return "redirect:/signin_client";
+        }
+        if (!cl.get(0).getPassword().equals(user_password)) {
+            return "redirect:/signin_client";
+        }
+        mode = 2;
+        user_id = cl.get(0).getId();
+        return "redirect:/services";
+    }
+
+    @PostMapping("/signin_as_employee")
+    public String signin_as_employee(@RequestParam(name = "employee_login") String user_login,
+                                     @RequestParam(name = "employee_password") String user_password) {
+        List<Workers> sl = workersDAO.getAllWorkersByValue("login", user_login);
+        if (sl.size() != 1) {
+            return "redirect:/signin_client";
+        }
+        if (!sl.get(0).getPassword().equals(user_password)) {
+            return "redirect:/signin_client";
+        }
+        if (sl.get(0).getIs_admin() == 1L) {
+            mode = 0;
+        } else {
+            mode = 1;
+        }
+        user_id = sl.get(0).getId();
+        return "redirect:/services";
+    }
+
+    @GetMapping("/add_contract")
+    public String add_contract_page(Model model) {
+        model.addAttribute("add", true);
+        model.addAttribute("edit", false);
+        model.addAttribute("action", "/add_contract");
+        return "add_contract";
+    }
+
+    @PostMapping("/add_contract")
+    public String add_contract(@RequestParam(name = "id_deal", required = false) Long contract_id,
+                @RequestParam(name = "client") Long client_id,
+                @RequestParam(name = "worker") Long worker_id,
+                @RequestParam(name = "service") Long service_id,
+                @RequestParam(name = "start_date", required = false) String start_date,
+                @RequestParam(name = "end_date", required = false) String end_date,
+                @RequestParam(name = "description") String description,
+                Model model) {
+
+            Deal contract = null;
+            if (contract_id != null) {
+                contract = dealDAO.getById(contract_id);
+            }
+
+            Clients client = null;
+            if (client_id != null) {
+                client = clientsDAO.getById(client_id);
+            }
+
+            Workers workers = null;
+            if (worker_id != null) {
+                workers = workersDAO.getById(worker_id);
+            }
+
+            Services services = null;
+            if (service_id != null) {
+                services = servicesDAO.getById(service_id);
+            }
+
+            if (contract != null) {
+                contract.setClient(client);
+                contract.setWorker(workers);
+                contract.setService(services);
+                contract.setStart(str2Date(start_date));
+                contract.setEnd(str2Date(end_date));
+                contract.setDescr(description);
+                dealDAO.update(contract);
+            } else {
+                contract = new Deal(contract_id, client, workers, services, str2Date(start_date), str2Date(end_date), description);
+                dealDAO.save(contract);
+            }
+
+            return "redirect:/lk_staff";
+    }
 }

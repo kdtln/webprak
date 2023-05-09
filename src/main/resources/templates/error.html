@@ -14,13 +14,13 @@
     </style>
 </head>
 <body>
-<div th:replace="general :: site-header"> </div>
+<div th:replace="~{general :: site-header}"> </div>
 
 <h1>Произошла ошибка.</h1>
 <p>Запрашиваемый ресурс недоступен или невозможно выполнить необходимый запрос.</p>
 
-<div th:replace="general :: site-footer"></div>
-<div th:replace="general :: site-script"></div>
+<div th:replace="~{general :: site-script}"></div>
+<div th:replace="~{general :: site-script}"></div>
 
 </body>
 </html>

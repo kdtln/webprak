@@ -8,6 +8,7 @@ import ru.msu.cmc.webprak.models.Deal;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,17 +20,45 @@ public class DealDAOImplementation extends CommonDAOImplementation<Deal, Long> i
 
     @Override
     public List<Deal> getAllDealsByValue(String col_name, String value) {
-        try (Session session = sessionFactory.openSession()) {
-            Query<Deal> query = session.createQuery
-                    ("FROM Deal WHERE " + col_name + " = :v", Deal.class);
-
-            if ((Objects.equals(col_name, "start")) || (Objects.equals(col_name, "end"))) {
-                query.setParameter("v", Date.valueOf(value));
-            } else if (Objects.equals(col_name, "descr")) {
-                query.setParameter("v", value);
+        List<Deal> result = new ArrayList<>();
+        if (Objects.equals(col_name, "worker")) {
+            List<Deal> all_deals = this.getAll().stream().toList();
+            for (Deal deal : all_deals) {
+                if (Objects.equals(deal.getWorker().getId(), Long.valueOf(value))) {
+                    result.add(deal);
+                }
             }
-            return query.getResultList();
         }
+        else if (Objects.equals(col_name, "service")) {
+            List<Deal> all_deals = this.getAll().stream().toList();
+            for (Deal deal : all_deals) {
+                if (Objects.equals(deal.getService().getId(), Long.valueOf(value))) {
+                    result.add(deal);
+                }
+            }
+        }
+        else if (Objects.equals(col_name, "client")) {
+            List<Deal> all_deals = this.getAll().stream().toList();
+            for (Deal deal : all_deals) {
+                if (Objects.equals(deal.getClient().getId(), Long.valueOf(value))) {
+                    result.add(deal);
+                }
+            }
+        }
+        else {
+            try (Session session = sessionFactory.openSession()) {
+                Query<Deal> query = session.createQuery
+                        ("FROM Deal WHERE " + col_name + " = :v", Deal.class);
+
+                if ((Objects.equals(col_name, "start")) || (Objects.equals(col_name, "end"))) {
+                    query.setParameter("v", Date.valueOf(value));
+                } else {
+                    query.setParameter("v", value);
+                }
+                return query.getResultList();
+            }
+        }
+        return result;
     }
 
     @Override

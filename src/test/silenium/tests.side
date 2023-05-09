@@ -1,0 +1,2669 @@
+{
+  "id": "395cec2c-c263-4dd5-877a-0e8a5665c182",
+  "version": "2.0",
+  "name": "webprak",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "3edc7485-c5e5-463a-b8c2-8324ae613e75",
+    "name": "guest",
+    "commands": [{
+      "id": "adaa4695-61c5-4037-8d29-b77368a63492",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02a1e66f-278c-4b75-be28-889f06fb782c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d7d788e-045a-49d0-85c4-376cac79b21e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Фирма \"Ро и Ко\". Список услуг ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "765f1b0a-be01-4278-b1a1-29cc1f16ae29",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(3) > span",
+      "targets": [],
+      "value": "Любые услуги, консультации по защите потребителей"
+    }, {
+      "id": "5c3ac721-0014-4ce3-80dc-c5d73cf53c8e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1) > span", "css:finder"],
+        ["xpath=//td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": "1"
+    }, {
+      "id": "585014bf-5cab-48cd-afe0-8a7d64dba247",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(4) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(4) > span", "css:finder"],
+        ["xpath=//td[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1500')]", "xpath:innerText"]
+      ],
+      "value": "1500"
+    }, {
+      "id": "deaae669-6c4b-4cc4-9b01-abd2fa12b0f0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(2) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(2) > span", "css:finder"],
+        ["xpath=//td[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Защита потребителей')]", "xpath:innerText"]
+      ],
+      "value": "Защита потребителей"
+    }, {
+      "id": "6c718d49-bb27-43ec-b9a8-4f7158f4592b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Номер услуги')]", "xpath:innerText"]
+      ],
+      "value": "Номер услуги"
+    }, {
+      "id": "8a4f966b-9468-4232-bbc9-b47549d089f3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Название услуги')]", "xpath:innerText"]
+      ],
+      "value": "Название услуги"
+    }, {
+      "id": "1ca291c8-1e4d-4967-be49-4414af3bd688",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(3)",
+      "targets": [
+        ["css=th:nth-child(3)", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Описание')]", "xpath:innerText"]
+      ],
+      "value": "Описание"
+    }, {
+      "id": "ff226d33-1063-4d78-b977-dbd6f19669f8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(4)",
+      "targets": [
+        ["css=th:nth-child(4)", "css:finder"],
+        ["xpath=//th[4]", "xpath:position"],
+        ["xpath=//th[contains(.,'Приблизительная стоимость')]", "xpath:innerText"]
+      ],
+      "value": "Приблизительная стоимость"
+    }, {
+      "id": "b14da234-fdab-43e7-b8a4-54d6f55f1062",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > td:nth-child(3) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3) > span", "css:finder"],
+        ["xpath=//td[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Любые услуги, консультации по защите потребителей')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c4c9504-f99d-4721-9bba-cb03df2769a6",
+      "comment": "",
+      "command": "click",
+      "target": "id=aboutCompanyLink",
+      "targets": [
+        ["id=aboutCompanyLink", "id"],
+        ["linkText=О компании", "linkText"],
+        ["css=#aboutCompanyLink", "css:finder"],
+        ["xpath=//a[contains(text(),'О компании')]", "xpath:link"],
+        ["xpath=//a[@id='aboutCompanyLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ef47b02-b6ff-4b4a-b496-316391a6eb5f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "О компании",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "278b5f76-a2b6-4a56-baca-51284578a404",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//tt[contains(.,'№1234567890')]",
+      "targets": [
+        ["css=tt", "css:finder"],
+        ["xpath=//tt", "xpath:position"],
+        ["xpath=//tt[contains(.,'№1234567890')]", "xpath:innerText"]
+      ],
+      "value": "№1234567890"
+    }, {
+      "id": "54ed5a66-4ac7-4502-8c63-43aa5f3e5440",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b901dba8-7b16-4584-b21c-024caafad3c7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=client_submit",
+      "targets": [
+        ["id=client_submit", "id"],
+        ["css=#client_submit", "css:finder"],
+        ["xpath=//input[@id='client_submit']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "105fe8ae-c3bd-4a10-908b-1fb8da3e4509",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=employee_submit",
+      "targets": [
+        ["id=employee_submit", "id"],
+        ["css=#employee_submit", "css:finder"],
+        ["xpath=//input[@id='employee_submit']", "xpath:attributes"],
+        ["xpath=//form[2]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e96b0c54-eb9b-4960-a8f1-a28a8ed1cd0f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=guest_submit",
+      "targets": [
+        ["id=guest_submit", "id"],
+        ["css=#guest_submit", "css:finder"],
+        ["xpath=//input[@id='guest_submit']", "xpath:attributes"],
+        ["xpath=//form[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f305eb8-002f-4fd3-8e73-61b4a2213537",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=register_submit",
+      "targets": [
+        ["id=register_submit", "id"],
+        ["css=#register_submit", "css:finder"],
+        ["xpath=//input[@id='register_submit']", "xpath:attributes"],
+        ["xpath=//form[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "30687a1f-f4f7-4faf-803e-a832e24ed3ea",
+    "name": "client",
+    "commands": [{
+      "id": "ccb394e9-dce8-4ab2-8246-a9ab41fee1d4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc6db083-529c-4fb6-8c62-6c57bb567524",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e85413c-6411-49ec-b726-8141076fd3ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c009a71-bf60-4fee-af5f-d7adc50631e1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Вход и регистрация",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3ddd64c-7beb-4f9c-9c1f-f7f8ae8a9739",
+      "comment": "",
+      "command": "click",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=user_login", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb51043b-8129-4554-ac6c-8ee668981385",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=user_login", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "iv_ivanov"
+    }, {
+      "id": "78bb0d5e-ee6c-4a95-a2fa-b090b7127e14",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=client_submit",
+      "targets": [
+        ["id=client_submit", "id"],
+        ["css=#client_submit", "css:finder"],
+        ["xpath=//input[@id='client_submit']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c7d92fd-9db2-4e3f-9f59-7aa9104afe59",
+      "comment": "",
+      "command": "click",
+      "target": "id=user_password",
+      "targets": [
+        ["id=user_password", "id"],
+        ["name=user_password", "name"],
+        ["css=#user_password", "css:finder"],
+        ["xpath=//input[@id='user_password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eea3e111-d97a-48f0-b545-aa1d790df958",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_password",
+      "targets": [
+        ["id=user_password", "id"],
+        ["name=user_password", "name"],
+        ["css=#user_password", "css:finder"],
+        ["xpath=//input[@id='user_password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "12qwerTy"
+    }, {
+      "id": "ef26d927-ea21-4fdd-abf7-52ab048b38ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=client_submit",
+      "targets": [
+        ["id=client_submit", "id"],
+        ["css=#client_submit", "css:finder"],
+        ["xpath=//input[@id='client_submit']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53163f65-ff63-4644-9c13-2aab46ea0b31",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Фирма \"Ро и Ко\". Список услуг",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "974f1d58-6a4b-4833-86b0-805ba61ea6dd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=orderServiceButton",
+      "targets": [
+        ["id=orderServiceButton", "id"],
+        ["css=tr:nth-child(1) #orderServiceButton", "css:finder"],
+        ["xpath=//button[@id='orderServiceButton']", "xpath:attributes"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Заказать')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55d5513c-6d44-4cea-b9ea-d8910097ac6b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(2) > span",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2) > span", "css:finder"],
+        ["xpath=//tr[3]/td[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цифровое право')]", "xpath:innerText"]
+      ],
+      "value": "Цифровое право"
+    }, {
+      "id": "d7efd4ca-25cb-42ed-b62b-1d37c9dd82bc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(3) > span",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(3) > span", "css:finder"],
+        ["xpath=//tr[3]/td[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Защита в области информационных технологий')]", "xpath:innerText"]
+      ],
+      "value": "Защита в области информационных технологий"
+    }, {
+      "id": "15e9ef8c-9b89-4e2f-b11f-98652ef64b6e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(4) > span",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(4) > span", "css:finder"],
+        ["xpath=//tr[3]/td[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'3006')]", "xpath:innerText"]
+      ],
+      "value": "3006"
+    }, {
+      "id": "8e83980b-9073-4290-b4d7-e2ddeb68e65d",
+      "comment": "",
+      "command": "click",
+      "target": "id=orderServiceButton",
+      "targets": [
+        ["id=orderServiceButton", "id"],
+        ["css=tr:nth-child(1) #orderServiceButton", "css:finder"],
+        ["xpath=//button[@id='orderServiceButton']", "xpath:attributes"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Заказать')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30f9e61b-06b7-4927-838d-e0265a3cca5f",
+      "comment": "",
+      "command": "click",
+      "target": "id=aboutCompanyLink",
+      "targets": [
+        ["id=aboutCompanyLink", "id"],
+        ["linkText=О компании", "linkText"],
+        ["css=#aboutCompanyLink", "css:finder"],
+        ["xpath=//a[contains(text(),'О компании')]", "xpath:link"],
+        ["xpath=//a[@id='aboutCompanyLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb2b452f-df8e-424a-8d51-557bb95075c0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "О компании",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58fedf2c-f502-4996-b5bd-30da71096220",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=lkClientLink",
+      "targets": [
+        ["id=lkClientLink", "id"],
+        ["linkText=Личный кабинет", "linkText"],
+        ["css=#lkClientLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Личный кабинет')]", "xpath:link"],
+        ["xpath=//a[@id='lkClientLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'lk_client')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": "Личный кабинет"
+    }, {
+      "id": "81d962a8-3f02-4a45-9b1b-3f1bbd4db34d",
+      "comment": "",
+      "command": "click",
+      "target": "id=lkClientLink",
+      "targets": [
+        ["id=lkClientLink", "id"],
+        ["linkText=Личный кабинет", "linkText"],
+        ["css=#lkClientLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Личный кабинет')]", "xpath:link"],
+        ["xpath=//a[@id='lkClientLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'lk_client')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19f6e964-9452-44a3-a443-88ff0fa6a14d",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет клиента",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c244ac69-abf4-4a60-a57f-c85c3ad3f2ec",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Описание контракта')]", "xpath:innerText"]
+      ],
+      "value": "Описание контракта"
+    }, {
+      "id": "71698683-3f87-4966-a624-68f221ccbbe3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Номер контракта')]", "xpath:innerText"]
+      ],
+      "value": "Номер контракта"
+    }, {
+      "id": "ded123f5-9b9e-4727-b5d1-3dba49780c58",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(3)",
+      "targets": [
+        ["css=th:nth-child(3)", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Клиент')]", "xpath:innerText"]
+      ],
+      "value": "Клиент"
+    }, {
+      "id": "88797fa9-5a01-4c77-8f4a-c66abf29b39d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(4)",
+      "targets": [
+        ["css=th:nth-child(4)", "css:finder"],
+        ["xpath=//th[4]", "xpath:position"],
+        ["xpath=//th[contains(.,'Услуга в области')]", "xpath:innerText"]
+      ],
+      "value": "Услуга в области"
+    }, {
+      "id": "703370d9-619f-4d63-84bf-d78f8ba2008f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(5)",
+      "targets": [
+        ["css=th:nth-child(5)", "css:finder"],
+        ["xpath=//th[5]", "xpath:position"],
+        ["xpath=//th[contains(.,'Дата начала')]", "xpath:innerText"]
+      ],
+      "value": "Дата начала"
+    }, {
+      "id": "e2c7f9f2-e890-497b-aacb-a9f6e29200a3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(6)",
+      "targets": [
+        ["css=th:nth-child(6)", "css:finder"],
+        ["xpath=//th[6]", "xpath:position"],
+        ["xpath=//th[contains(.,'Дата завершения')]", "xpath:innerText"]
+      ],
+      "value": "Дата завершения"
+    }, {
+      "id": "f037d547-be23-4feb-b782-66390afc2e55",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(1) > span",
+      "targets": [
+        ["css=td:nth-child(1) > span", "css:finder"],
+        ["xpath=//td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'цифра')]", "xpath:innerText"]
+      ],
+      "value": "цифра"
+    }, {
+      "id": "51df8c90-6ef7-4f35-b997-487f19792e69",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(2) > span",
+      "targets": [
+        ["css=td:nth-child(2) > span", "css:finder"],
+        ["xpath=//td[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": "1"
+    }, {
+      "id": "bbd65253-5293-4b58-9252-3f8f9906f1d8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(3) > span",
+      "targets": [
+        ["css=td:nth-child(3) > span", "css:finder"],
+        ["xpath=//td[3]/span", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "9d61d293-95c5-4562-b260-9600262cb2e0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(4) > span",
+      "targets": [
+        ["css=td:nth-child(4) > span", "css:finder"],
+        ["xpath=//td[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цифровое право')]", "xpath:innerText"]
+      ],
+      "value": "Цифровое право"
+    }, {
+      "id": "b3bc87cb-f260-47a6-81fc-d72c8432aa63",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(5) > span",
+      "targets": [
+        ["css=td:nth-child(5) > span", "css:finder"],
+        ["xpath=//td[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2023-01-16')]", "xpath:innerText"]
+      ],
+      "value": "2023-01-16"
+    }, {
+      "id": "5ea7756e-40a7-46ef-9ebd-bd378783f8d3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(6) > span",
+      "targets": [
+        ["css=td:nth-child(6) > span", "css:finder"],
+        ["xpath=//td[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2023-03-15')]", "xpath:innerText"]
+      ],
+      "value": "2023-03-15"
+    }]
+  }, {
+    "id": "540da01f-2058-421f-975c-f04d6e385a37",
+    "name": "staff",
+    "commands": [{
+      "id": "f4609736-ba14-471f-b861-e74c28c2b753",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1e926a-ed3f-4691-afd0-dc9e887af505",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4823f718-514b-4ad1-a344-f1786cf013a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb402bb-8ecb-44a5-abde-7e6628fabb9f",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_login",
+      "targets": [
+        ["id=employee_login", "id"],
+        ["name=employee_login", "name"],
+        ["css=#employee_login", "css:finder"],
+        ["xpath=//input[@id='employee_login']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b7b1436-2693-4674-85f5-26c0942133cd",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee_login",
+      "targets": [
+        ["id=employee_login", "id"],
+        ["name=employee_login", "name"],
+        ["css=#employee_login", "css:finder"],
+        ["xpath=//input[@id='employee_login']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": "niks"
+    }, {
+      "id": "61ddd9b6-752a-4b72-a5f1-dd671434d043",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_password",
+      "targets": [
+        ["id=employee_password", "id"],
+        ["name=employee_password", "name"],
+        ["css=#employee_password", "css:finder"],
+        ["xpath=//input[@id='employee_password']", "xpath:attributes"],
+        ["xpath=//form[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de70424c-a32a-4b5c-9696-ccf2e5f38063",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee_password",
+      "targets": [
+        ["id=employee_password", "id"],
+        ["name=employee_password", "name"],
+        ["css=#employee_password", "css:finder"],
+        ["xpath=//input[@id='employee_password']", "xpath:attributes"],
+        ["xpath=//form[2]/input[2]", "xpath:position"]
+      ],
+      "value": "dsfhgjhkjl"
+    }, {
+      "id": "b80d50bf-681b-471d-ab5e-04ff241ef728",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=employee_submit",
+      "targets": [
+        ["id=employee_submit", "id"],
+        ["css=#employee_submit", "css:finder"],
+        ["xpath=//input[@id='employee_submit']", "xpath:attributes"],
+        ["xpath=//form[2]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a540c134-8b30-4317-b72c-dc5668ef9b53",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_submit",
+      "targets": [
+        ["id=employee_submit", "id"],
+        ["css=#employee_submit", "css:finder"],
+        ["xpath=//input[@id='employee_submit']", "xpath:attributes"],
+        ["xpath=//form[2]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91fc9103-0fd5-45e1-8dce-2dcd0fbbe72d",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Фирма \"Ро и Ко\". Список услуг ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d24292d-102d-42c0-ab93-f8b1c2963641",
+      "comment": "",
+      "command": "click",
+      "target": "id=aboutCompanyLink",
+      "targets": [
+        ["id=aboutCompanyLink", "id"],
+        ["linkText=О компании", "linkText"],
+        ["css=#aboutCompanyLink", "css:finder"],
+        ["xpath=//a[contains(text(),'О компании')]", "xpath:link"],
+        ["xpath=//a[@id='aboutCompanyLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3724640-3e2a-4b78-82e0-093639739482",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "О компании",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba4ca823-ed44-4f12-9261-2843a007d820",
+      "comment": "",
+      "command": "click",
+      "target": "id=lkStaffLink",
+      "targets": [
+        ["id=lkStaffLink", "id"],
+        ["linkText=Личный кабинет", "linkText"],
+        ["css=#lkStaffLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Личный кабинет')]", "xpath:link"],
+        ["xpath=//a[@id='lkStaffLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'lk_staff')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce2f7e84-d690-4187-a301-3d25012e2117",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет сотрудника",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43d01822-580b-421c-bea1-8248390a5d15",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Описание контракта')]", "xpath:innerText"]
+      ],
+      "value": "Описание контракта"
+    }, {
+      "id": "7fa3e312-b4e1-47e1-a23d-6f1fd8916a61",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Номер контракта')]", "xpath:innerText"]
+      ],
+      "value": "Номер контракта"
+    }, {
+      "id": "32b49488-514a-4a7a-8464-e9cfe99e40b8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(3)",
+      "targets": [
+        ["css=th:nth-child(3)", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Клиент')]", "xpath:innerText"]
+      ],
+      "value": "Клиент"
+    }, {
+      "id": "dbaa1539-fe0d-4166-8186-7f29fc574f37",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(4)",
+      "targets": [
+        ["css=th:nth-child(4)", "css:finder"],
+        ["xpath=//th[4]", "xpath:position"],
+        ["xpath=//th[contains(.,'Услуга в области')]", "xpath:innerText"]
+      ],
+      "value": "Услуга в области"
+    }, {
+      "id": "527f632d-ed1f-4472-80d0-1771ed168a30",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(5)",
+      "targets": [
+        ["css=th:nth-child(5)", "css:finder"],
+        ["xpath=//th[5]", "xpath:position"],
+        ["xpath=//th[contains(.,'Дата начала')]", "xpath:innerText"]
+      ],
+      "value": "Дата начала"
+    }, {
+      "id": "0b12d14f-4cee-408f-97a5-6f4eb1f075cc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(6)",
+      "targets": [
+        ["css=th:nth-child(6)", "css:finder"],
+        ["xpath=//th[6]", "xpath:position"],
+        ["xpath=//th[contains(.,'Дата завершения')]", "xpath:innerText"]
+      ],
+      "value": "Дата завершения"
+    }, {
+      "id": "96e5d558-9b6d-422a-8a66-a7f2b5451755",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(7)",
+      "targets": [
+        ["css=th:nth-child(7)", "css:finder"],
+        ["xpath=//th[7]", "xpath:position"],
+        ["xpath=//th[contains(.,'Редактировать')]", "xpath:innerText"]
+      ],
+      "value": "Редактировать"
+    }, {
+      "id": "710bf4ee-d5b5-4d27-a011-cd89084b91d7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(8)",
+      "targets": [
+        ["css=th:nth-child(8)", "css:finder"],
+        ["xpath=//th[8]", "xpath:position"],
+        ["xpath=//th[contains(.,'Удалить')]", "xpath:innerText"]
+      ],
+      "value": "Удалить"
+    }, {
+      "id": "50106ee6-0423-4c35-8d8f-e3feabfe1785",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1) > span", "css:finder"],
+        ["xpath=//td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'цифры')]", "xpath:innerText"]
+      ],
+      "value": "цифры"
+    }, {
+      "id": "f3940e6e-503e-49e2-8300-4c40fa5fe9d8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(3) > span",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3) > span", "css:finder"],
+        ["xpath=//td[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'postgres')]", "xpath:innerText"]
+      ],
+      "value": "postgres"
+    }, {
+      "id": "14535039-16fa-43d1-a7a7-4eaabf473ba1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=editContractButton",
+      "targets": [
+        ["id=editContractButton", "id"],
+        ["css=tr:nth-child(1) #editContractButton", "css:finder"],
+        ["xpath=//button[@id='editContractButton']", "xpath:attributes"],
+        ["xpath=//td[7]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Редактировать')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cb77d89-6f94-4d2d-9909-0c072e0e8b25",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=deleteContractButton",
+      "targets": [
+        ["id=deleteContractButton", "id"],
+        ["css=tr:nth-child(1) #deleteContractButton", "css:finder"],
+        ["xpath=//button[@id='deleteContractButton']", "xpath:attributes"],
+        ["xpath=//td[8]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Удалить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc4219a8-5a10-4925-90be-2681952c18cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=addPersonButton",
+      "targets": [
+        ["id=addPersonButton", "id"],
+        ["css=#addPersonButton", "css:finder"],
+        ["xpath=//button[@id='addPersonButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить новый контракт')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b898f09-8ab2-472e-982e-541f4bd70eed",
+      "comment": "",
+      "command": "click",
+      "target": "id=client",
+      "targets": [
+        ["id=client", "id"],
+        ["name=client", "name"],
+        ["css=#client", "css:finder"],
+        ["xpath=//input[@id='client']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5250dfc0-21ec-4f29-830d-972cbf116bc9",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Добавление договора",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edc42623-dfeb-4be1-99a9-e54a65e26dd9",
+      "comment": "",
+      "command": "type",
+      "target": "id=client",
+      "targets": [
+        ["id=client", "id"],
+        ["name=client", "name"],
+        ["css=#client", "css:finder"],
+        ["xpath=//input[@id='client']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "df6f386c-e507-47d6-a158-cddb4ce98fea",
+      "comment": "",
+      "command": "click",
+      "target": "id=worker",
+      "targets": [
+        ["id=worker", "id"],
+        ["name=worker", "name"],
+        ["css=#worker", "css:finder"],
+        ["xpath=//input[@id='worker']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "598f5b36-2d17-4067-9e55-0e2e14728886",
+      "comment": "",
+      "command": "type",
+      "target": "id=worker",
+      "targets": [
+        ["id=worker", "id"],
+        ["name=worker", "name"],
+        ["css=#worker", "css:finder"],
+        ["xpath=//input[@id='worker']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "b11be55e-6211-459f-a969-2b716d8346ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=service",
+      "targets": [
+        ["id=service", "id"],
+        ["name=service", "name"],
+        ["css=#service", "css:finder"],
+        ["xpath=//input[@id='service']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d357f78c-d8f7-44b1-b61a-24eccd9f369a",
+      "comment": "",
+      "command": "type",
+      "target": "id=service",
+      "targets": [
+        ["id=service", "id"],
+        ["name=service", "name"],
+        ["css=#service", "css:finder"],
+        ["xpath=//input[@id='service']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "db06ca33-b37e-4556-b566-9ae411c9bca8",
+      "comment": "",
+      "command": "click",
+      "target": "id=start_date",
+      "targets": [
+        ["id=start_date", "id"],
+        ["name=start_date", "name"],
+        ["css=#start_date", "css:finder"],
+        ["xpath=//input[@id='start_date']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ac73564-392b-4653-a8c8-2e6d3cb3364b",
+      "comment": "",
+      "command": "type",
+      "target": "id=start_date",
+      "targets": [
+        ["id=start_date", "id"],
+        ["name=start_date", "name"],
+        ["css=#start_date", "css:finder"],
+        ["xpath=//input[@id='start_date']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2023-05-09"
+    }, {
+      "id": "65b4f936-e523-48a3-b0f6-614e7b1810d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=end_time",
+      "targets": [
+        ["id=end_time", "id"],
+        ["name=end_date", "name"],
+        ["css=#end_time", "css:finder"],
+        ["xpath=//input[@id='end_time']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "326db068-83cd-4bd7-89fb-c3064bdfb8ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=end_time",
+      "targets": [
+        ["id=end_time", "id"],
+        ["name=end_date", "name"],
+        ["css=#end_time", "css:finder"],
+        ["xpath=//input[@id='end_time']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "2023-05-25"
+    }, {
+      "id": "28c74010-d24c-42f3-abbd-10c583587a79",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75237659-a40a-405e-a1be-cdb29f43618e",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "ntcn1"
+    }, {
+      "id": "ab1c5fc9-0159-4e7e-8ca5-5cf0d5b5570b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31e651e7-517c-488f-852a-726657aeba36",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет сотрудника",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05131639-52cc-4257-b0ff-809e467198ee",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1) > span",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1) > span", "css:finder"],
+        ["xpath=//tr[2]/td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ntcn1')]", "xpath:innerText"]
+      ],
+      "value": "ntcn1"
+    }, {
+      "id": "f0f02870-e252-4675-8332-b14378a6554c",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) #editContractButton",
+      "targets": [
+        ["css=tr:nth-child(2) #editContractButton", "css:finder"],
+        ["xpath=(//button[@id='editContractButton'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td[7]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "550f3784-f1eb-45c7-82f5-3bdeff497c7f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Редактирование информации о контракте",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e7a4871-cbf2-46d0-9ed4-270d1dfa9e8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0fa8fd8-b8de-4f9d-8c8a-53266a74982b",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "тест1"
+    }, {
+      "id": "48aaa295-d5b0-49e0-b904-73a973e2736f",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e419ef4-605c-4afe-b888-e5c45575bccc",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет сотрудника",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0aa20fa8-2e90-4544-a61b-324fd26dfc9d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1) > span",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1) > span", "css:finder"],
+        ["xpath=//tr[2]/td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ntcn1')]", "xpath:innerText"]
+      ],
+      "value": "тест1"
+    }, {
+      "id": "ea61bea9-df47-4a74-b17b-b6bfe4868fad",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) #deleteContractButton",
+      "targets": [
+        ["css=tr:nth-child(2) #deleteContractButton", "css:finder"],
+        ["xpath=(//button[@id='deleteContractButton'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td[8]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23f28dd8-8521-42ac-b802-f7011f942288",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет сотрудника",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac2610d4-ffb4-4ea4-996b-d32a83316dd1",
+      "comment": "",
+      "command": "click",
+      "target": "id=clientsPanelLink",
+      "targets": [
+        ["id=clientsPanelLink", "id"],
+        ["linkText=Все клиенты", "linkText"],
+        ["css=#clientsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все клиенты')]", "xpath:link"],
+        ["xpath=//a[@id='clientsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'clients')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21afb89c-5ae4-4c0b-837e-833ad645b4a9",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все клиенты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42b118ff-5690-48f6-8d0f-b8e0ad238a7f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//th[contains(.,'ID клиента')]",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'ID клиента')]", "xpath:innerText"]
+      ],
+      "value": "ID клиента"
+    }, {
+      "id": "24e2a71d-69ce-4ccc-94a8-23453b8e1997",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Имя компании')]", "xpath:innerText"]
+      ],
+      "value": "Имя компании"
+    }, {
+      "id": "a91f9a89-80ec-45a2-ad47-87e85861b1da",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(3)",
+      "targets": [
+        ["css=th:nth-child(3)", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Контактное лицо')]", "xpath:innerText"]
+      ],
+      "value": "Контактное лицо"
+    }, {
+      "id": "ba8edad0-8e94-45ce-b8bc-b96bea079f45",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(4)",
+      "targets": [
+        ["css=th:nth-child(4)", "css:finder"],
+        ["xpath=//th[4]", "xpath:position"],
+        ["xpath=//th[contains(.,'Email клиента')]", "xpath:innerText"]
+      ],
+      "value": "Email клиента"
+    }, {
+      "id": "ec6a375b-f80b-4e1a-ad96-ab78be505734",
+      "comment": "",
+      "command": "click",
+      "target": "id=contractsPanelLink",
+      "targets": [
+        ["id=contractsPanelLink", "id"],
+        ["linkText=Все контракты", "linkText"],
+        ["css=#contractsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все контракты')]", "xpath:link"],
+        ["xpath=//a[@id='contractsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'contracts')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все контракты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ae10305-1c21-4061-9b14-ad9b84707e42",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все контракты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "640937a9-7fc3-4b2a-92c4-fb8d278b308d",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c93bb36e-db2a-4ddd-8b7d-ea16b142d132",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Вход и регистрация",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4d4f70e2-af5f-41bf-9f61-faf8e9ac83d1",
+    "name": "admin",
+    "commands": [{
+      "id": "bf6fe51f-5b5c-4f99-821e-bb7627c67043",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5807fc81-46ca-4b0d-86a7-ac245f8a135f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aeea2eb3-0c5e-47cd-9bc3-f51e6f116532",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25e5a478-1866-46a3-b50e-3ecc02b795d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_login",
+      "targets": [
+        ["id=employee_login", "id"],
+        ["name=employee_login", "name"],
+        ["css=#employee_login", "css:finder"],
+        ["xpath=//input[@id='employee_login']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "334b6b9d-1ce9-4816-87fb-14a9f1a98751",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee_login",
+      "targets": [
+        ["id=employee_login", "id"],
+        ["name=employee_login", "name"],
+        ["css=#employee_login", "css:finder"],
+        ["xpath=//input[@id='employee_login']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": "uru"
+    }, {
+      "id": "bd99ee10-97c3-46c0-a063-bd01dd6e7b31",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_password",
+      "targets": [
+        ["id=employee_password", "id"],
+        ["name=employee_password", "name"],
+        ["css=#employee_password", "css:finder"],
+        ["xpath=//input[@id='employee_password']", "xpath:attributes"],
+        ["xpath=//form[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abea9371-c84a-475f-bdd6-5ec7299e3f1a",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee_password",
+      "targets": [
+        ["id=employee_password", "id"],
+        ["name=employee_password", "name"],
+        ["css=#employee_password", "css:finder"],
+        ["xpath=//input[@id='employee_password']", "xpath:attributes"],
+        ["xpath=//form[2]/input[2]", "xpath:position"]
+      ],
+      "value": "dfbhbdkfk"
+    }, {
+      "id": "ae121398-eba3-45c0-8830-2f1dd13c9478",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=employee_submit",
+      "targets": [
+        ["id=employee_submit", "id"],
+        ["css=#employee_submit", "css:finder"],
+        ["xpath=//input[@id='employee_submit']", "xpath:attributes"],
+        ["xpath=//form[2]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af041040-66db-4692-979a-cf8957a26838",
+      "comment": "",
+      "command": "click",
+      "target": "id=employee_submit",
+      "targets": [
+        ["id=employee_submit", "id"],
+        ["css=#employee_submit", "css:finder"],
+        ["xpath=//input[@id='employee_submit']", "xpath:attributes"],
+        ["xpath=//form[2]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb4a4875-1476-4699-9c04-afed80d31b89",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Фирма \"Ро и Ко\". Список услуг",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "790ccf16-cb87-41bf-980f-d17ab8eea91a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=addPersonButton",
+      "targets": [
+        ["id=addPersonButton", "id"],
+        ["css=#addPersonButton", "css:finder"],
+        ["xpath=//button[@id='addPersonButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить новую услугу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d6ddcde-27a3-4089-8647-bdb6a11eeb1f",
+      "comment": "",
+      "command": "click",
+      "target": "id=addPersonButton",
+      "targets": [
+        ["id=addPersonButton", "id"],
+        ["css=#addPersonButton", "css:finder"],
+        ["xpath=//button[@id='addPersonButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить новую услугу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3d93d0f-b238-4709-8aea-35686052cbdc",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Редактирование информации об услуге",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7a0941c-8a40-47cd-8d44-b25e89269bb7",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_service",
+      "targets": [
+        ["id=id_service", "id"],
+        ["name=id_service", "name"],
+        ["css=#id_service", "css:finder"],
+        ["xpath=//input[@id='id_service']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3eecea54-9fb2-4ca7-9d05-5784369e6be7",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36cdefe3-e64c-414c-badd-caefb1f77175",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Юридическая услуга"
+    }, {
+      "id": "45d481d2-76f1-40e4-aaa7-b005dbb0f688",
+      "comment": "",
+      "command": "click",
+      "target": "id=describe",
+      "targets": [
+        ["id=describe", "id"],
+        ["name=describe", "name"],
+        ["css=#describe", "css:finder"],
+        ["xpath=//input[@id='describe']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c335bdbb-25d8-4b08-a328-6abaa0d4f990",
+      "comment": "",
+      "command": "type",
+      "target": "id=describe",
+      "targets": [
+        ["id=describe", "id"],
+        ["name=describe", "name"],
+        ["css=#describe", "css:finder"],
+        ["xpath=//input[@id='describe']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "услуга"
+    }, {
+      "id": "c80a8de0-b467-4f59-9554-457bfab860b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07a9844e-6712-4887-9cf5-1d782455adba",
+      "comment": "",
+      "command": "type",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "60000"
+    }, {
+      "id": "37c59b3a-98d9-430a-8bea-305795b0399b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=submitButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2047478a-fa6c-484d-8e64-441a9142dd94",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77fee4a1-a138-492b-ac4e-9af34054d24a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Фирма \"Ро и Ко\". Список услуг",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8414d4c-cbcd-4d70-865d-8f9eace57c86",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(4) > span",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(4) > span", "css:finder"],
+        ["xpath=//tr[4]/td[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'60000')]", "xpath:innerText"]
+      ],
+      "value": "60000"
+    }, {
+      "id": "2b58c684-0af1-44a2-87a1-e54660784695",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) #editServiceButton",
+      "targets": [
+        ["css=tr:nth-child(4) #editServiceButton", "css:finder"],
+        ["xpath=(//button[@id='editServiceButton'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[5]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b3758d5-906a-40bc-b385-72b7c3ceb6ef",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Редактирование информации об услуге",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b57c5a07-4f1e-498b-8bb5-518482d1ffd4",
+      "comment": "",
+      "command": "click",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a850d4e7-9dd6-4ad0-9dae-98151c864969",
+      "comment": "",
+      "command": "type",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "60005"
+    }, {
+      "id": "c90afde6-129c-448c-a370-26162faead48",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "19e67610-d985-4023-953a-606df275369e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(4) > span",
+      "targets": [],
+      "value": "60005"
+    }, {
+      "id": "64b32ddf-d518-445e-8825-99186034a6ff",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(4) #deleteServiceButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a926c4e-7147-4538-bbf6-ec03b76f5574",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) #deleteServiceButton",
+      "targets": [
+        ["css=tr:nth-child(4) #deleteServiceButton", "css:finder"],
+        ["xpath=(//button[@id='deleteServiceButton'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[6]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fd49ef8-ef41-45fb-a610-cfde00c7e8c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=aboutCompanyLink",
+      "targets": [
+        ["id=aboutCompanyLink", "id"],
+        ["linkText=О компании", "linkText"],
+        ["css=#aboutCompanyLink", "css:finder"],
+        ["xpath=//a[contains(text(),'О компании')]", "xpath:link"],
+        ["xpath=//a[@id='aboutCompanyLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4ca1e5c-1c24-45df-99fb-bfaf865e3ad5",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "О компании",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9c1d049-5ff2-45ce-b64a-722833dd18c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=lkStaffLink",
+      "targets": [
+        ["id=lkStaffLink", "id"],
+        ["linkText=Личный кабинет", "linkText"],
+        ["css=#lkStaffLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Личный кабинет')]", "xpath:link"],
+        ["xpath=//a[@id='lkStaffLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'lk_staff')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dbb12bd-0ff6-48cb-b91f-1621a4103c3d",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Личный кабинет сотрудника",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb6f5c04-0ea2-48bc-b32b-3e7d07a9e2b0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(3) > span",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3) > span", "css:finder"],
+        ["xpath=//tr[2]/td[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'b')]", "xpath:innerText"]
+      ],
+      "value": "b"
+    }, {
+      "id": "861020e8-7031-4828-94c0-aa81c0d3d9fe",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(4) > span",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(4) > span", "css:finder"],
+        ["xpath=//tr[2]/td[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Недвижимость')]", "xpath:innerText"]
+      ],
+      "value": "Недвижимость"
+    }, {
+      "id": "9616e835-af75-48e9-adf0-b10a14fce584",
+      "comment": "",
+      "command": "click",
+      "target": "id=clientsPanelLink",
+      "targets": [
+        ["id=clientsPanelLink", "id"],
+        ["linkText=Все клиенты", "linkText"],
+        ["css=#clientsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все клиенты')]", "xpath:link"],
+        ["xpath=//a[@id='clientsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'clients')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a58719f0-aaa4-4338-8659-403ad54a522f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все клиенты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f3633ef-4ee9-49ae-9bfe-4926aeea87ab",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=addClientButton",
+      "targets": [
+        ["id=addClientButton", "id"],
+        ["css=#addClientButton", "css:finder"],
+        ["xpath=//button[@id='addClientButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить нового клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a3e7a84-6dd6-4699-bade-fe4b667f453a",
+      "comment": "",
+      "command": "click",
+      "target": "id=addClientButton",
+      "targets": [
+        ["id=addClientButton", "id"],
+        ["css=#addClientButton", "css:finder"],
+        ["xpath=//button[@id='addClientButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить нового клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd31758d-4fcb-44bb-b2eb-072ab9c548ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=face",
+      "targets": [
+        ["id=face", "id"],
+        ["name=face", "name"],
+        ["css=#face", "css:finder"],
+        ["xpath=//input[@id='face']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e0d9803-bb2d-480e-9485-ee810b2879ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=face",
+      "targets": [
+        ["id=face", "id"],
+        ["name=face", "name"],
+        ["css=#face", "css:finder"],
+        ["xpath=//input[@id='face']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Дятлинко Екатерина"
+    }, {
+      "id": "d3da815f-ed90-465b-81ba-392421d1c174",
+      "comment": "",
+      "command": "click",
+      "target": "id=company_name",
+      "targets": [
+        ["id=company_name", "id"],
+        ["name=company_name", "name"],
+        ["css=#company_name", "css:finder"],
+        ["xpath=//input[@id='company_name']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdfbbafa-8f8f-4272-a564-553483b4d0a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=company_name",
+      "targets": [
+        ["id=company_name", "id"],
+        ["name=company_name", "name"],
+        ["css=#company_name", "css:finder"],
+        ["xpath=//input[@id='company_name']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "ИСП"
+    }, {
+      "id": "6f8c21b7-1b84-4960-a375-2d61459d7c22",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='/save_client']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ef462c7-c4a1-4154-b3b6-5eaaec9a3419",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef2ed956-1887-44ac-9699-8cba2e4f1fe3",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "ms.dyatlinko@mail.ru"
+    }, {
+      "id": "0d0851ee-b794-4aee-bb18-ca0376132b00",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b0bfbea-cb76-4bad-bc06-f92a6078dfd6",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "kdtln"
+    }, {
+      "id": "e7021e1a-9bcb-4d0f-a0e4-de4af1af8c6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e549fae-6dad-4c01-9904-369dfdeda679",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "943bd6de-2982-4da9-a8c3-3ec9bf608818",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=submitButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b910f41-dfee-4765-aa25-bac92d9bcbad",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c0a4100-ece6-486e-a408-c3e3b3259bc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=clientsPanelLink",
+      "targets": [
+        ["id=clientsPanelLink", "id"],
+        ["linkText=Все клиенты", "linkText"],
+        ["css=#clientsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все клиенты')]", "xpath:link"],
+        ["xpath=//a[@id='clientsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'clients')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d93d2ae0-713e-4bc1-bc8b-13f51a35233a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все клиенты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "770b6c14-35ab-48bc-860d-94bb74d00375",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(6) > span",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(6) > span", "css:finder"],
+        ["xpath=//tr[4]/td[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'qwertY1')]", "xpath:innerText"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "ccc5ab21-0a11-49f9-95f7-9b48b82431c9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(5) #editClientButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9196b93-d9ba-442a-9f93-160e38fe2352",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #editClientButton",
+      "targets": [
+        ["css=tr:nth-child(5) #editClientButton", "css:finder"],
+        ["xpath=(//button[@id='editClientButton'])[5]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[7]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf42e155-8bf8-444a-aca3-3bdde31ba4d8",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9030969e-6d80-4761-8389-187e03f3bff2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "d51e18a6-fbb1-4e90-8657-2e9114e50487",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92474b56-bf63-4085-8b5c-d6c9da14a96f",
+      "comment": "",
+      "command": "click",
+      "target": "id=clientsPanelLink",
+      "targets": [
+        ["id=clientsPanelLink", "id"],
+        ["linkText=Все клиенты", "linkText"],
+        ["css=#clientsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все клиенты')]", "xpath:link"],
+        ["xpath=//a[@id='clientsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'clients')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4320af34-7127-4448-9e6e-23ac036e0568",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все клиенты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "908efd34-0d8e-4e3a-847f-023149e8bd7b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(6) > span",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(6) > span", "css:finder"],
+        ["xpath=//tr[4]/td[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'qwertY1')]", "xpath:innerText"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "05996a12-7080-47e3-9082-bf889970b687",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(5) #deleteClientButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "496ca965-ec36-4b90-a395-2542e1c543a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #deleteClientButton",
+      "targets": [
+        ["css=tr:nth-child(5) #deleteClientButton", "css:finder"],
+        ["xpath=(//button[@id='deleteClientButton'])[5]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[8]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1286e3f6-4911-4c7d-8bc2-3ce337ee0911",
+      "comment": "",
+      "command": "click",
+      "target": "id=contractsPanelLink",
+      "targets": [
+        ["id=contractsPanelLink", "id"],
+        ["linkText=Все контракты", "linkText"],
+        ["css=#contractsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все контракты')]", "xpath:link"],
+        ["xpath=//a[@id='contractsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'contracts')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все контракты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e2bf60e-4bea-4c05-8fef-d560caf886af",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все контракты",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85e9e13a-c110-4ac3-aa78-5cc8c382edfe",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(5) > span",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(5) > span", "css:finder"],
+        ["xpath=//tr[3]/td[5]/span", "xpath:position"]
+      ],
+      "value": "Цифровое право"
+    }, {
+      "id": "60264b6a-d7f2-4886-8a7a-f8e9f3d3846b",
+      "comment": "",
+      "command": "click",
+      "target": "id=staffPanelLink",
+      "targets": [
+        ["id=staffPanelLink", "id"],
+        ["linkText=Все сотрудники", "linkText"],
+        ["css=#staffPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все сотрудники')]", "xpath:link"],
+        ["xpath=//a[@id='staffPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'staff')])[2]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все сотрудники')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4d436d8-3374-4ee4-8c06-4b320758b0c8",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все сотрудники",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f782dee-ff13-41f0-9442-c5fd163cec4a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=addStaffButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15cad3e5-1f32-496a-afe6-a3d8f97b0a70",
+      "comment": "",
+      "command": "click",
+      "target": "id=addStaffButton",
+      "targets": [
+        ["id=addStaffButton", "id"],
+        ["css=#addStaffButton", "css:finder"],
+        ["xpath=//button[@id='addStaffButton']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить нового сотрудника')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74275b28-96c3-4b9c-8955-a89bc5d9b3f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=full_name",
+      "targets": [
+        ["id=full_name", "id"],
+        ["name=full_name", "name"],
+        ["css=#full_name", "css:finder"],
+        ["xpath=//input[@id='full_name']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6217f83-1915-4752-b1ef-05c41c4c485b",
+      "comment": "",
+      "command": "type",
+      "target": "id=full_name",
+      "targets": [
+        ["id=full_name", "id"],
+        ["name=full_name", "name"],
+        ["css=#full_name", "css:finder"],
+        ["xpath=//input[@id='full_name']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Дятлинко Екатерина"
+    }, {
+      "id": "74ccfdfe-2d83-4d32-978c-656df6622af6",
+      "comment": "",
+      "command": "click",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["name=address", "name"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79962c00-3e80-418b-8804-ee5fe2d11053",
+      "comment": "",
+      "command": "type",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["name=address", "name"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "Москваы"
+    }, {
+      "id": "f395cc36-6542-48cf-99e4-8aa10174d4f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1644352-6838-41e3-ae1d-7d4843d63c58",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "+7 (961) 661-61-65"
+    }, {
+      "id": "7604926b-a9ba-4f73-951e-bccab690016a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c303afb9-776f-41e1-b091-7fc7168d50e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "ms.dyatlinko@mail.ru"
+    }, {
+      "id": "1dc34f00-6950-493a-8bb7-d5b17cf78793",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe0b8a7d-7b29-4289-acc4-75057a5bebbc",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "kdtln"
+    }, {
+      "id": "a0cf692e-a8c5-45ec-b872-c264c6be324f",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7e5d699-e25b-4d6a-b9e1-2b95b9903d10",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "f9c94662-66ff-4a3d-835d-e01f6dd738f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=post",
+      "targets": [
+        ["id=post", "id"],
+        ["name=post", "name"],
+        ["css=#post", "css:finder"],
+        ["xpath=//input[@id='post']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47e88e0f-8be3-4804-9f13-150a02a114b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=post",
+      "targets": [
+        ["id=post", "id"],
+        ["name=post", "name"],
+        ["css=#post", "css:finder"],
+        ["xpath=//input[@id='post']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": "лаборант"
+    }, {
+      "id": "3bdc460a-ddf0-45c7-a3a5-5a5bc3f5935b",
+      "comment": "",
+      "command": "click",
+      "target": "id=education",
+      "targets": [
+        ["id=education", "id"],
+        ["name=education", "name"],
+        ["css=#education", "css:finder"],
+        ["xpath=//input[@id='education']", "xpath:attributes"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07341c74-de05-440c-9203-eaaf90325150",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='/save_staff']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1895af2-507b-47a8-819a-21c6b759e88a",
+      "comment": "",
+      "command": "click",
+      "target": "id=is_admin",
+      "targets": [
+        ["id=is_admin", "id"],
+        ["name=is_admin", "name"],
+        ["css=#is_admin", "css:finder"],
+        ["xpath=//input[@id='is_admin']", "xpath:attributes"],
+        ["xpath=//input[10]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4beeec2c-12d4-49f5-9878-f784edb3667f",
+      "comment": "",
+      "command": "type",
+      "target": "id=is_admin",
+      "targets": [
+        ["id=is_admin", "id"],
+        ["name=is_admin", "name"],
+        ["css=#is_admin", "css:finder"],
+        ["xpath=//input[@id='is_admin']", "xpath:attributes"],
+        ["xpath=//input[10]", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "be8b3f40-d985-4ae1-8ad7-18f25dfa9430",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdc8a3c5-dbdb-4def-ae32-12e80a9405e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=education",
+      "targets": [
+        ["id=education", "id"],
+        ["name=education", "name"],
+        ["css=#education", "css:finder"],
+        ["xpath=//input[@id='education']", "xpath:attributes"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1fad9cd-bec4-4d58-8a09-46affb734f17",
+      "comment": "",
+      "command": "type",
+      "target": "id=education",
+      "targets": [
+        ["id=education", "id"],
+        ["name=education", "name"],
+        ["css=#education", "css:finder"],
+        ["xpath=//input[@id='education']", "xpath:attributes"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": "воивп"
+    }, {
+      "id": "833f06f6-5161-452e-ac03-8d47d4146cbc",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b868c4e-ee61-4564-b9ca-2dd5f4f6bb61",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все сотрудники",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e322b112-40c2-48b5-ab1a-d20e0c164030",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(10) > span",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(10) > span", "css:finder"],
+        ["xpath=//tr[4]/td[10]/span", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "1148df2f-1bec-42af-95e1-263fe4ac2b13",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) #editEmployeeButton",
+      "targets": [
+        ["css=tr:nth-child(4) #editEmployeeButton", "css:finder"],
+        ["xpath=(//button[@id='editEmployeeButton'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[11]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "589e072e-3914-48df-b929-8688adb8cd05",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Редактирование информации о сотруднике",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98ab00f0-715e-4131-9639-0a4ebc3a19f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=is_admin",
+      "targets": [
+        ["id=is_admin", "id"],
+        ["name=is_admin", "name"],
+        ["css=#is_admin", "css:finder"],
+        ["xpath=//input[@id='is_admin']", "xpath:attributes"],
+        ["xpath=//input[10]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba6c36fb-09a7-48f4-8341-8e328beef86d",
+      "comment": "",
+      "command": "type",
+      "target": "id=is_admin",
+      "targets": [
+        ["id=is_admin", "id"],
+        ["name=is_admin", "name"],
+        ["css=#is_admin", "css:finder"],
+        ["xpath=//input[@id='is_admin']", "xpath:attributes"],
+        ["xpath=//input[10]", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "e8aace0d-e598-4ab3-b6ba-340f2def770e",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//input[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "701b12c2-38a9-4e9f-900e-eb04267e22f8",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Все сотрудники",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb383c68-a020-4dc4-b186-d2bbf58cabfa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(10) > span",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(10) > span", "css:finder"],
+        ["xpath=//tr[4]/td[10]/span", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "03d2171f-7c11-4f81-8da0-0ea88f7a6f82",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(4) #deleteEmployeeButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bf650f2-2a77-4ae1-8987-103cc5de1d6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) #deleteEmployeeButton",
+      "targets": [
+        ["css=tr:nth-child(4) #deleteEmployeeButton", "css:finder"],
+        ["xpath=(//button[@id='deleteEmployeeButton'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[12]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0c06324-1bb1-40b9-a9a8-96b8c16a7d66",
+      "comment": "",
+      "command": "click",
+      "target": "id=staffPanelLink",
+      "targets": [
+        ["id=staffPanelLink", "id"],
+        ["linkText=Все сотрудники", "linkText"],
+        ["css=#staffPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все сотрудники')]", "xpath:link"],
+        ["xpath=//a[@id='staffPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'staff')])[2]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все сотрудники')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28506217-6d08-4238-a1be-e1537ccaed8c",
+      "comment": "",
+      "command": "click",
+      "target": "id=contractsPanelLink",
+      "targets": [
+        ["id=contractsPanelLink", "id"],
+        ["linkText=Все контракты", "linkText"],
+        ["css=#contractsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все контракты')]", "xpath:link"],
+        ["xpath=//a[@id='contractsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'contracts')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все контракты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ae713e0-e7cb-4fde-a022-820dd240632c",
+      "comment": "",
+      "command": "click",
+      "target": "id=clientsPanelLink",
+      "targets": [
+        ["id=clientsPanelLink", "id"],
+        ["linkText=Все клиенты", "linkText"],
+        ["css=#clientsPanelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Все клиенты')]", "xpath:link"],
+        ["xpath=//a[@id='clientsPanelLink']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'clients')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "318b80f8-2205-4ac3-a3c8-70f2c3b85d6e",
+      "comment": "",
+      "command": "click",
+      "target": "id=signinPage",
+      "targets": [
+        ["id=signinPage", "id"],
+        ["linkText=Вход", "linkText"],
+        ["css=#signinPage", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[@id='signinPage']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'signin_client')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9fda4120-e332-4da8-944c-3fa6bf0e4b3f",
+    "name": "guest",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3edc7485-c5e5-463a-b8c2-8324ae613e75"]
+  }, {
+    "id": "c193efc0-0ea8-43e0-9ef4-42f21324f6f3",
+    "name": "client",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["30687a1f-f4f7-4faf-803e-a832e24ed3ea"]
+  }, {
+    "id": "2ac94225-bdd8-4087-82a7-cfc14948fd59",
+    "name": "admin",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "a8cb5090-d67c-4906-a433-65afcad43f64",
+    "name": "staff",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["540da01f-2058-421f-975c-f04d6e385a37"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
