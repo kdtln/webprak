@@ -23,17 +23,17 @@
 <div class="indent">
     <form method="post" action="/save_service">
 
-        <label for="service_id">service_id:</label>
-        <input type="text" id="service_id" name="service_id" th:value="${service.getId()}"><br><br>
+        <label for="id_service">service_id:</label>
+        <input type="text" id="id_service" name="id_service" th:value="${service.getId()}"><br><br>
 
-        <label for="service_type_name">service_type_name:</label>
-        <input type="text" id="service_type_name" name="service_type_name" required th:value="${service.getName()}"><br><br>
+        <label for="name">Название услуги:</label>
+        <input type="text" id="name" name="name" required th:value="${service.getName()}"><br><br>
 
-        <label for="service_description">Описание услуги:</label>
-        <input type="text" id="service_description" name="service_description" required th:value="${service.getDescr()}"><br><br>
+        <label for="describe">Описание услуги:</label>
+        <input type="text" id="describe" name="describe" required th:value="${service.getDescr()}"><br><br>
 
-        <label for="service_approximate_cost">Приблизительная стоимость:</label>
-        <input type="text" id="service_approximate_cost" name="service_approximate_cost" required th:value="${service.getPrice()}"><br><br>
+        <label for="price">Приблизительная стоимость:</label>
+        <input type="text" id="price" name="price" required th:value="${service.getPrice()}"><br><br>
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
     </form>

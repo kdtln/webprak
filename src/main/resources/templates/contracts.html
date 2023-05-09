@@ -21,7 +21,7 @@
 </nav>
 
 <div class="indent">
-    <form method="get" action="/edit_contract">
+    <form method="get" action="/add_contract">
         <button id="addPersonButton" type="submit" class="btn btn-primary">Добавить новый контракт</button>
     </form>
     <br>
@@ -32,17 +32,17 @@
             <th scope="col"> Описание контракта </th>
             <th scope="col"> Номер контракта </th>
             <th scope="col"> Клиент </th>
+            <th scope="col"> Сотрудник </th>
             <th scope="col"> Услуга в области </th>
             <th scope="col"> Дата начала </th>
             <th scope="col"> Дата завершения </th>
-            <th scope="col"> Стоимость </th>
-            <th scope="col" th:if="${mode <= 1}"> Редактировать </th>
-            <th scope="col" th:if="${mode <= 1}"> Удалить </th>
+            <th scope="col" th:if="${mode == 0}"> Редактировать </th>
+            <th scope="col" th:if="${mode == 0}"> Удалить </th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${contracts_list.isEmpty()}">
-            <td colspan="6"> В базе пока нет ни одного контракта. <a href="/edit_contract">Добавить контракт</a></td>
+            <td colspan="6"> В базе пока нет ни одного контракта. <a href="/add_contract">Добавить контракт</a></td>
         </tr>
         <tr th:each="contract : ${contracts_list}">
             <td>
@@ -52,10 +52,13 @@
                 <span th:text="${contract.getId()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getClient()}"> </span>
+                <span th:text="${contract.getClient().getFace()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getService()}"> </span>
+                <span th:text="${contract.getWorker().getName()}"> </span>
+            </td>
+            <td>
+                <span th:text="${contract.getService().getName()}"> </span>
             </td>
             <td>
                 <span th:text="${contract.getStart()}"> </span>
@@ -65,13 +68,13 @@
             </td>
 
             </td>
-            <td th:if="${mode <= 1}">
+            <td th:if="${mode == 0}">
                 <form method="get" action="/edit_contract">
                     <input type="hidden" name="contract_id" th:value="${contract.getId()}"/>
                     <button id="editContractButton" type="submit" class="btn btn-primary">Редактировать</button>
                 </form>
             </td>
-            <td th:if="${mode <= 1}">
+            <td th:if="${mode == 0}">
                 <form method="post" action="/delete_contract">
                     <input type="hidden" name="contract_id" th:value="${contract.getId()}"/>
                     <button id="deleteContractButton" type="submit" class="btn btn-primary">Удалить</button>

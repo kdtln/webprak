@@ -29,10 +29,11 @@
   <table class="table table-bordered table-warning">
     <thead class="thead-dark">
     <tr>
-      <th scope="col"> Имя клиента </th>
       <th scope="col"> ID клиента </th>
-      <th scope="col"> Контактный телефон клиента </th>
+      <th scope="col"> Имя компании </th>
+      <th scope="col"> Контактное лицо </th>
       <th scope="col"> Email клиента </th>
+      <th scope="col" th:if="${mode == 0}"> Логин клиента </th>
       <th scope="col" th:if="${mode == 0}"> Пароль клиента </th>
       <th scope="col" th:if="${mode == 0}"> Редактировать </th>
       <th scope="col" th:if="${mode == 0}"> Удалить </th>
@@ -44,16 +45,19 @@
     </tr>
     <tr th:each="client : ${clients_list}">
       <td>
+        <span th:text="${client.getId()}"> </span>
+      </td>
+      <td>
         <span th:text="${client.getName()}"> </span>
       </td>
       <td>
-        <span th:text="${client.getId()}"> </span>
+        <span th:text="${client.getFace()}"> </span>
       </td>
       <td>
         <span th:text="${client.getEmail()}"> </span>
       </td>
-      <td>
-        <span th:text="${client.getFace()}"> </span>
+      <td th:if="${mode == 0}">
+        <span th:text="${client.getLogin()}"> </span>
       </td>
       <td th:if="${mode == 0}">
         <span th:text="${client.getPassword()}"> </span>

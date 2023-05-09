@@ -23,23 +23,26 @@
 <div class="indent">
     <form method="post" action="/save_contract">
 
-        <label for="contract_id">contract_id:</label>
-        <input type="text" id="contract_id" name="contract_id" th:value="${contract.getId()}"><br><br>
+        <label for="id_deal">contract_id:</label>
+        <input type="text" id="id_deal" name="id_deal" th:value="${contract.getId()}"><br><br>
 
-        <label for="client_id">client_id:</label>
-        <input type="text" id="client_id" name="client_id" required th:value="${contract.getClient()}"><br><br>
+        <label for="client">client_id:</label>
+        <input type="text" id="client" name="client" required th:value="${contract.getClient().getId().toString()}"><br><br>
 
-        <label for="service_type_id">service_type_id:</label>
-        <input type="text" id="service_type_id" name="service_type_id" required th:value="${contract.getService()}"><br><br>
+        <label for="worker">worker_id:</label>
+        <input type="text" id="worker" name="worker" th:value="${contract.getWorker().getId().toString()}"><br><br>
 
-        <label for="beginning_date">Дата оформления:</label>
-        <input type="text" id="beginning_date" name="beginning_date" th:value="${contract.getStart()}"><br><br>
+        <label for="service">service_type_id:</label>
+        <input type="text" id="service" name="service" required th:value="${contract.getService().getId().toString()}"><br><br>
 
-        <label for="date_of_completion">Дата завершения:</label>
-        <input type="text" id="date_of_completion" name="date_of_completion" th:value="${contract.getEnd()}"><br><br>
+        <label for="start_date">Дата оформления:</label>
+        <input type="date" id="start_date" name="start_date" th:value="${contract.getStart()}"><br><br>
 
-        <label for="contract_description">Описание контракта:</label>
-        <input type="text" id="contract_description" name="contract_description" required th:value="${contract.getDescr()}"><br><br>
+        <label for="end_date">Дата завершения:</label>
+        <input type="date" id="end_date" name="end_date" th:value="${contract.getEnd()}"><br><br>
+
+        <label for="description">Описание контракта:</label>
+        <input type="text" id="description" name="description" required th:value="${contract.getDescr()}"><br><br>
 
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">

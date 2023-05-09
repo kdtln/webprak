@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 <!--page header-->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ddffdd" th:fragment="site-header">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #acc2ac" th:fragment="site-header">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -58,9 +58,6 @@
       </li>
       <li class="nav-item" th:if="${mode == 0}">
         <a class="nav-link" id="staffPanelLink" th:href="staff">Все сотрудники</a>
-      </li>
-      <li class="nav-item" th:if="${mode == 42}">
-        <a class="nav-link" id="adminPanelLink" th:href="admin_panel">Панель администраторов</a>
       </li>
     </ul>
   </div>

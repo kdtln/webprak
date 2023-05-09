@@ -37,6 +37,7 @@
             <th scope="col"> Логин клиента </th>
             <th scope="col" th:if="${mode == 0}"> Пароль сотрудника </th>
             <th scope="col"> Должность сотрудника </th>
+            <th scope="col"> Образование сотрудника </th>
             <th scope="col"> Права администратора </th>
             <th scope="col" th:if="${mode == 0}"> Редактировать </th>
             <th scope="col" th:if="${mode == 0}"> Удалить </th>
@@ -70,6 +71,9 @@
             </td>
             <td>
                 <span th:text="${employee.getPost()}"> </span>
+            </td>
+            <td>
+                <span th:text="${employee.getEduc()}"> </span>
             </td>
             <td>
                 <span th:text="${employee.getIs_admin()}"> </span>

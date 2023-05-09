@@ -147,6 +147,12 @@ public class DealDAOTest {
     }
 
     @Test
+    void new_tests() {
+        List<Deal> list_from_workers = dealDAO.getAllDealsByValue("worker", "1");
+        assertEquals(1, list_from_workers.size());
+        assertEquals(list_from_workers.get(0).getClient().getId(), 3 );
+    }
+    @Test
     void updating_test() {
         List<Deal> would_be_updated_list = dealDAO.getAllDealsByValue("descr", "недвижимость");
         assertEquals(1, would_be_updated_list.size());

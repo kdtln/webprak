@@ -21,7 +21,7 @@
 </nav>
 
 <div class="indent">
-    <form method="get" action="/edit_contract">
+    <form method="get" action="/add_contract">
         <button id="addPersonButton" type="submit" class="btn btn-primary">Добавить новый контракт</button>
     </form>
     <br>
@@ -35,8 +35,8 @@
             <th scope="col"> Услуга в области </th>
             <th scope="col"> Дата начала </th>
             <th scope="col"> Дата завершения </th>
-            <th scope="col"> Стоимость </th>
-            <th scope="col" th:if="${mode <= 1}"> Занимаюсь </th>
+            <th scope="col"> Редактировать </th>
+            <th scope="col"> Удалить </th>
         </tr>
         </thead>
         <tbody>
@@ -51,10 +51,10 @@
                 <span th:text="${contract.getId()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getClient()}"> </span>
+                <span th:text="${contract.getClient().getName()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getService()}"> </span>
+                <span th:text="${contract.getService().getName()}"> </span>
             </td>
             <td>
                 <span th:text="${contract.getStart()}"> </span>
@@ -67,6 +67,12 @@
                 <form method="get" action="/edit_contract">
                     <input type="hidden" name="contract_id" th:value="${contract.getId()}"/>
                     <button id="editContractButton" type="submit" class="btn btn-primary">Редактировать</button>
+                </form>
+            </td>
+            <td th:if="${mode <= 1}">
+                <form method="post" action="/delete_contract">
+                    <input type="hidden" name="contract_id" th:value="${contract.getId()}"/>
+                    <button id="deleteContractButton" type="submit" class="btn btn-primary">Удалить</button>
                 </form>
             </td>
         </tr>

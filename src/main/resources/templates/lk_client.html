@@ -21,9 +21,6 @@
 </nav>
 
 <div class="indent">
-    <form method="get" action="/edit_contract">
-        <button id="addPersonButton" type="submit" class="btn btn-primary">Добавить новый контракт</button>
-    </form>
     <br>
 
     <table class="table table-bordered table-warning">
@@ -38,9 +35,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:if="${contracts_list.isEmpty()}">
-            <td colspan="6"> В базе пока нет ни одного контракта. <a href="/edit_contract">Добавить контракт</a></td>
-        </tr>
+
         <tr th:each="contract : ${contracts_list}">
             <td>
                 <span th:text="${contract.getDescr()}"> </span>
@@ -49,10 +44,10 @@
                 <span th:text="${contract.getId()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getClient()}"> </span>
+                <span th:text="${contract.getClient().getName()}"> </span>
             </td>
             <td>
-                <span th:text="${contract.getService()}"> </span>
+                <span th:text="${contract.getService().getName()}"> </span>
             </td>
             <td>
                 <span th:text="${contract.getStart()}"> </span>

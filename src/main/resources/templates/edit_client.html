@@ -22,23 +22,23 @@
 
 <div class="indent">
     <form method="post" action="/save_client">
-        <label for="client_id">client_id:</label>
-        <input type="text" id="client_id" name="client_id" th:value="${client.getId()}"><br><br>
+        <label for="id_client">client_id:</label>
+        <input type="text" id="id_client" name="id_client" th:value="${client.getId()}"><br><br>
 
-        <label for="client_face">ФИО Клиента:</label>
-        <input type="text" id="client_face" name="client_face" required th:value="${client.getFace()}"><br><br>
+        <label for="face">ФИО Клиента:</label>
+        <input type="text" id="face" name="face" required th:value="${client.getFace()}"><br><br>
 
-        <label for="client_fullname">Название Фирмы:</label>
-        <input type="text" id="client_fullname" name="client_fullname" required th:value="${client.getName()}"><br><br>
+        <label for="company_name">Название Фирмы:</label>
+        <input type="text" id="company_name" name="company_name" required th:value="${client.getName()}"><br><br>
 
-        <label for="client_email">Email:</label>
-        <input type="text" id="client_email" name="client_email" required th:value="${client.getEmail()}"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required th:value="${client.getEmail()}"><br><br>
 
-        <label for="client_login">Логин клиента:</label>
-        <input type="text" id="client_login" name="client_login" required th:value="${client.getLogin()}"><br><br>
+        <label for="login">Логин клиента:</label>
+        <input type="text" id="login" name="login" required th:value="${client.getLogin()}"><br><br>
 
-        <label for="client_password">Пароль клиента:</label>
-        <input type="text" id="client_password" name="client_password" required th:value="${client.getPassword()()}"><br><br>
+        <label for="password">Пароль клиента:</label>
+        <input type="text" id="password" name="password" required th:value="${client.getPassword()}"><br><br>
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
     </form>
